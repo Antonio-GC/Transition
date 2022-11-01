@@ -1,0 +1,204 @@
+* {
+
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+:root{
+--blue: #7FB3D5;
+--purpure-black: #512E5F ;
+--purpure: #884EA0;
+--red: #C70039 ;
+--orange: #FF5733;
+
+
+
+}
+
+body {
+    font-family: 'Chau Philomene One', sans-serif;
+    background-color: var(--purpure-black);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+button{
+    border: none;
+    outline: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.container {
+   
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(3, 1fr);
+height: 70%;
+width: 60%;
+border: solid black;
+gap: 10px;
+place-items: center;
+padding: 10px;
+border-radius: 10px;
+background-color: var(--purpure);
+box-shadow: 40px black;
+
+}
+
+
+.card {
+
+    
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    
+    
+    
+    
+    
+}
+
+.card p {
+    display: flex;
+    align-self: flex-start;
+font-size: 20px;
+    color: azure;
+}
+
+.box {
+background-color: var(--red);
+border-radius: 10px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    
+}
+
+.box--hover_one {
+transition: transform 600ms ease-in-out;
+
+}
+
+
+.box--hover_one:hover {
+transform: scale(1.4);
+    background-color: #42bd08;
+
+}
+
+.box--hover_two {
+    transition-duration: 800ms;
+}
+
+.box--hover_two:hover {
+
+    transform: scale(0.8);
+    background-color: #bdab08;
+
+}
+
+.box--hover_three{
+
+transition-property: width;
+transition-duration: 1s;
+
+}
+
+.box--hover_three:hover {
+    width: 100px;
+    transition-timing-function: linear;
+}
+
+
+
+.box--active_one {
+    transition-property: box-shadow, transform;
+    transition-duration: 350ms;
+    transition-timing-function: ease;
+  
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.24);
+}
+
+.box--active_one:active {
+    background-color: var(--orange);
+    box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+
+}
+
+.box--active_two {
+    filter: grayscale(100%);
+  transition: filter 450ms ease;
+}
+
+.box--active_two:active {
+    filter: grayscale(0%) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.5));
+}
+
+
+.box--active_three{
+
+    transition-property: transform;
+    transition-duration: 800ms;
+
+}
+
+.box--active_three:active {
+
+    transform: scale(1) rotate(160deg);
+
+}
+
+.box--focus_one {
+
+    transition-property: width;
+    transition-duration: 800ms;
+    transition-delay: 500ms;
+   
+}
+
+.box--focus_one:focus {
+   width: 200px;
+}
+
+.box--focus_two {
+    transition: transform 10s 500ms;
+}
+
+.box--focus_two:focus {
+    transform: rotate(360deg);
+
+}
+
+.box--focus_three {
+    transition-property: box-shadow, transform;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+  
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.24);
+
+}
+
+.box--focus_three:focus {
+    background-color: var(--orange);
+    box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+
+}
